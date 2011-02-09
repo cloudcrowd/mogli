@@ -1,9 +1,10 @@
 module Mogli
-
+  def self.httparty_response(response)
+    response.respond_to?(:parsed_response) ? response.parsed_response : response
+  end
 end
 
 require "httparty"
-require "hashie"
 
 
 require "mogli/authenticator"
@@ -14,12 +15,16 @@ require "mogli/action"
 require "mogli/activity"
 require "mogli/address"
 require "mogli/album"
+require "mogli/application"
+require "mogli/app_request"
 require "mogli/book"
 require "mogli/checkin"
 require "mogli/comment"
 require "mogli/education"
 require "mogli/event"
 require "mogli/group"
+require "mogli/insight"
+require "mogli/insight_value"
 require "mogli/interest"
 require "mogli/link"
 require "mogli/location"

@@ -15,6 +15,7 @@ module Mogli
 
     hash_populating_accessor :location, "Page"
     hash_populating_accessor :hometown, "Page"
+    hash_populating_accessor :languages, "Page"
 
     has_association :activities, "Activity"
     has_association :friends, "User"
@@ -26,6 +27,7 @@ module Mogli
     has_association :likes, "Page"
     has_association :home, "Post"
     has_association :accounts, "Page"
+    has_association :apprequests, "AppRequest"
 
     attr_reader :extended_permissions
 
